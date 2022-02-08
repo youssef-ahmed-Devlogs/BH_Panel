@@ -97,6 +97,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 .button__main:hover {
@@ -1063,6 +1064,14 @@ body {
   margin-top: 8px;
 }
 
+.login_footer {
+  padding: 10px;
+  color: #fff;
+  background-color: rgba(3, 34, 80, 0.6);
+  width: 100%;
+  text-align: center;
+}
+
 @media (max-width: 500px) {
   .login__page-content form .form__item {
     margin-bottom: 10px;
@@ -1092,6 +1101,11 @@ body {
 
   .login__page-content form .login__btn {
     margin-top: 9px;
+  }
+
+  .login_footer {
+    padding: 5px;
+    font-size: 14px;
   }
 }
 

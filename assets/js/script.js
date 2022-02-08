@@ -1,3 +1,16 @@
+// ======== START HEADER OPTIONS ON MOBILE SCREEN OPERATIONS ========
+
+if (document.querySelector(".options__btn") != null) {
+  const optionsBtn = document.querySelector(".options__btn");
+  const optionsContainer = document.querySelector(".bh__header-left");
+
+  optionsBtn.addEventListener("click", () => {
+    optionsContainer.classList.toggle("options_open");
+  });
+}
+
+// ======== END HEADER OPTIONS ON MOBILE SCREEN OPERATIONS ========
+
 // ======== START SIDEBAR OPERATIONS ========
 
 if (document.querySelector(".bh__header-hamburg__btn") != null) {

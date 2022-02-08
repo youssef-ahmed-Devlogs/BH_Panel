@@ -129,7 +129,7 @@ body {
   height: 70px;
   background: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-  z-index: 1000;
+  z-index: 998;
 }
 
 .bh__header-content {
@@ -260,6 +260,10 @@ body {
   border-radius: 50%;
 }
 
+.options__btn {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .bh__header-right {
     flex-direction: row-reverse;
@@ -284,18 +288,59 @@ body {
     height: 40px;
   }
 
-  .list__icons-item:not(.notifications-icon) {
-    display: none;
-  }
-
   .list__icons-item.notifications-icon .notification-count {
     font-size: 10px;
     left: 15px;
     top: 0px;
   }
+}
 
-  .bh__header-user__area {
+@media (max-width: 665px) {
+  .bh__header-left {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 70px;
+    width: 100%;
+    flex-direction: column-reverse;
+    background-color: #fff;
+    padding: 20px 10px;
+    gap: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
     display: none;
+  }
+
+  .bh__header-left.options_open {
+    display: flex;
+  }
+
+  .bh__header-content {
+    position: relative;
+  }
+
+  .bh__header-user__area-username {
+    font-size: 14px;
+  }
+
+  .options__btn {
+    border: none;
+    outline: none;
+    background: none;
+    width: 30px;
+    height: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+  }
+
+  .options__btn span {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #9b9b9b;
+    user-select: none;
   }
 }
 

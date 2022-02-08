@@ -29,11 +29,18 @@ html {
 }
 
 body {
+  color: #1e1d1d;
   background-color: #f8f8f8;
 }
 
 .small__head {
   font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.mid_head {
+  font-size: 22px;
+  font-weight: bold;
   margin-bottom: 5px;
 }
 
@@ -44,10 +51,70 @@ body {
   box-shadow: 0 0 6px rgb(0 0 0 / 8%);
 }
 
+.text-err {
+  color: rgb(218, 55, 55);
+  margin-top: 5px;
+}
+
 .grid__2 {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.list__info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.list__info::-webkit-scrollbar {
+  display: none;
+}
+
+.list__info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.list__info-row:not(:last-child) {
+  border-bottom: 1px solid #e9e8e8;
+}
+
+.button__main {
+  background: none;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #032250;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.button__main:hover {
+  filter: saturate(1.8);
+}
+
+@media (max-width: 600px) {
+  .small__head {
+    font-size: 16px;
+  }
+
+  .mid_head {
+    font-size: 19px;
+  }
+
+  .list__info-item {
+    font-size: 14px;
+  }
 }
 
 /* ============ END GENERAL ============ */
@@ -196,6 +263,15 @@ body {
 @media (max-width: 767px) {
   .bh__header-right {
     flex-direction: row-reverse;
+  }
+
+  .bh__header-hamburg__btn {
+    width: 28px;
+    height: 17px;
+  }
+
+  .bh__header-hamburg__btn span {
+    height: 2px;
   }
 
   .bh__brand,
@@ -352,6 +428,28 @@ body {
 @media (max-width: 767px) {
   .bh__sidebar {
     right: -100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sub_sidebar-link::after {
+    width: 5px;
+    height: 5px;
+  }
+
+  .sidebar__link,
+  .sub_sidebar-link {
+    font-size: 14px;
+  }
+
+  .sidebar__link i {
+    font-size: 10px;
+  }
+
+  .sidebar__link-icon,
+  .sidebar__link-icon img {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -626,6 +724,30 @@ body {
   font-size: 10px;
 }
 
+/* subscriptions List */
+.subscriptions__messages {
+  margin-top: 15px;
+}
+
+.subscriptions__list {
+  width: calc(50% - 10px);
+}
+
+.subscriptions__msg,
+.subscriptions__date {
+  color: #c3c3c3;
+}
+
+.subscriptions__link {
+  text-decoration: none;
+  color: #0a50f6;
+}
+
+/* messages chart */
+.messages__chart {
+  width: calc(50% - 10px);
+}
+
 @media (max-width: 1400px) {
   .daily__business-card {
     padding: 10px;
@@ -655,9 +777,16 @@ body {
   }
 }
 
+@media (max-width: 1300px) {
+  .subscriptions__list {
+    width: 100%;
+  }
+}
+
 @media (max-width: 991px) {
   .subscriptions__chart,
-  .sales__chart {
+  .sales__chart,
+  .messages__chart {
     width: 100%;
   }
 }
@@ -670,9 +799,189 @@ body {
 }
 
 @media (max-width: 500px) {
+  .filter__statistics span {
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+
   .statistics__cards {
     grid-template-columns: 1fr;
+  }
+
+  .statistic__card .top__card .card__title,
+  .statistic__numeric-num,
+  .statistic__numeric {
+    font-size: 14px;
+  }
+
+  .statistic__card .top__card .card__circle-statistic .inner {
+    font-size: 10px;
+  }
+
+  .statistic__card .bottom__card .statistic__numeric .statistic__numeric-title {
+    font-size: 12px;
+  }
+
+  .daily__business-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .simple__breadcrumb,
+  .daily__business-name,
+  .news__name,
+  .news__count,
+  .news__info .view__news {
+    font-size: 14px;
+  }
+
+  .news__info .view__news i {
+    font-size: 9px;
+  }
+
+  .news__reports.grid__2 {
+    display: block;
+    width: 100%;
+  }
+
+  .news__reports .news,
+  .news__reports .reports {
+    width: 100%;
   }
 }
 
 /* ============ END MAIN CONTNET ============ */
+
+/* ============ START LOGIN PAGE ============ */
+
+.login__page {
+  background: url("../images/login_page_background.jpeg"),
+    linear-gradient(
+        to top right,
+        rgba(255, 255, 255, 0.5) 10%,
+        rgba(3, 34, 80, 0.3) 100%
+      )
+      100%;
+  background-blend-mode: overlay;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__page-content {
+  width: 500px;
+  padding: 30px 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login__page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.login__page-header .change__lang {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login__page-content form {
+  text-align: center;
+}
+
+.login__page-content form .form__item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.login__page-content form .form__item label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.login__page-content form .form__item #username,
+.login__page-content form .form__item #password {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 5px 15px;
+  height: 50px;
+  border: 1px solid #c3c3c373;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.login__page-content form .operations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login__page-content form .operations .remember-me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9b9b9b;
+}
+
+.login__page-content form .operations .forget-password {
+  text-decoration: none;
+  color: #9b9b9b;
+}
+
+.login__page-content form .login__btn {
+  width: 100%;
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+.login__page-content form .not__have__account {
+  text-decoration: none;
+  color: #9b9b9b;
+  display: block;
+  margin-top: 8px;
+}
+
+@media (max-width: 500px) {
+  .login__page-content form .form__item {
+    margin-bottom: 10px;
+  }
+
+  .login__page-content form .form__item label,
+  .login__page-content form .operations .remember-me,
+  .login__page-content form .operations .forget-password,
+  .login__page-content form .login__btn,
+  .login__page-content form .form__item #username,
+  .login__page-content form .form__item #password,
+  .login__page-content form .not__have__account {
+    font-size: 14px;
+  }
+
+  .login__page-content form .form__item #username,
+  .login__page-content form .form__item #password {
+    height: 35px;
+    margin-top: 6px;
+  }
+
+  .login__page-content form .operations {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .login__page-content form .login__btn {
+    margin-top: 9px;
+  }
+}
+
+/* ============ END LOGIN PAGE ============ */

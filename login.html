@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BH Panel</title>
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main class="login__page">
+      <div class="login__page-content card__design">
+        <div class="login__page-header">
+          <h3 class="mid_head">تسجيل الدخول</h3>
+          <span class="change__lang">En</span>
+        </div>
+
+        <form action="">
+          <div class="form__item">
+            <label for="username">اسم المستخدم</label>
+            <input type="text" name="username" id="username" />
+            <small class="text-err"></small>
+          </div>
+          <div class="form__item">
+            <label for="password">كلمة المرور</label>
+            <input type="password" name="password" id="password" />
+            <small class="text-err"></small>
+          </div>
+          <div class="operations">
+            <label for="remember-me" class="remember-me">
+              <input type="checkbox" name="remember-me" id="remember-me" />
+              تذكرني المرة القادمة
+            </label>
+            <a href="#" class="forget-password">هل نسيت كلمة المرور؟</a>
+          </div>
+
+          <button type="submit" class="login__btn button__main">
+            تسجيل الدخول
+          </button>
+
+          <a href="#" class="not__have__account">ليس لديك حساب؟</a>
+        </form>
+      </div>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

@@ -103,6 +103,55 @@ body {
   filter: saturate(1.8);
 }
 
+.social__media {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  direction: ltr;
+  gap: 2px;
+}
+
+.social__media .social__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.social__media .social__icon.facebook-icon {
+  background-color: #2754bd;
+}
+
+.social__media .social__icon.instagram-icon {
+  background-color: #cc3fc0;
+}
+
+.social__media .social__icon.messenger-icon {
+  background-color: #5a8cff;
+}
+
+.social__media .social__icon.twitter-icon {
+  background-color: #6c98fd;
+}
+
+.social__media .social__icon.whatsapp-icon {
+  background-color: #51cf40;
+}
+
+.social__media .social__icon:hover {
+  width: 70px;
+}
+
 @media (max-width: 600px) {
   .small__head {
     font-size: 16px;
@@ -114,6 +163,16 @@ body {
 
   .list__info-item {
     font-size: 14px;
+  }
+
+  .social__media .social__icon {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .social__media .social__icon:hover {
+    width: 40px;
   }
 }
 
@@ -948,9 +1007,15 @@ body {
   margin-bottom: 15px;
 }
 
-.login__page-content form .form__item label {
+.login__page-content form .form__item label,
+.form__bouquet-label {
   font-weight: bold;
   font-size: 18px;
+}
+
+.form__bouquet-label {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .login__page-content form .form__item #username,
@@ -1004,6 +1069,7 @@ body {
   }
 
   .login__page-content form .form__item label,
+  .form__bouquet-label,
   .login__page-content form .operations .remember-me,
   .login__page-content form .operations .forget-password,
   .login__page-content form .login__btn,

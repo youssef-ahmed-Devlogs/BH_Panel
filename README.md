@@ -11,6 +11,9 @@
 <h2>-- Login Page</h2>
 <img src="./UI/login_page.png" />
 
+<h2>-- Register Page</h2>
+<img src="./UI/register_page.png" />
+
 <h2>-- Page 1</h2>
 <img src="./UI/page1.PNG" />
 

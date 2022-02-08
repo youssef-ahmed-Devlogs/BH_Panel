@@ -333,15 +333,15 @@ if (document.querySelector(".login__page form") != null) {
       showErorrMsg(password, "يجب إدخال كلمة المرور ");
     }
   });
-
-  function showErorrMsg(input, err) {
-    const errElement = input.parentElement.querySelector(".text-err");
-    if (input.value == "") {
-      errElement.innerHTML = err;
-    } else {
-      errElement.innerHTML = "";
-    }
-  }
 }
 
 // ======== END LOGIN FORM ========
+
+function showErorrMsg(input, err) {
+  const errElement = input.parentElement.querySelector(".text-err");
+  if (input.value == "") {
+    errElement.innerHTML = err;
+  } else {
+    errElement.innerHTML = "";
+  }
+}

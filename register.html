@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BH Panel</title>
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main class="register__page">
+      <div class="register__page-content card__design">
+        <div class="register__page-header">
+          <h3 class="mid_head">تسجيل حساب جديد</h3>
+          <span class="change__lang">En</span>
+        </div>
+
+        <form action="">
+          <div class="form__items">
+            <div class="form__item">
+              <label for="firstname">الاسم الاول</label>
+              <input type="text" name="firstname" id="firstname" />
+              <small class="text-err"></small>
+            </div>
+            <div class="form__item">
+              <label for="lastname">الاسم الثاني</label>
+              <input type="text" name="lastname" id="lastname" />
+              <small class="text-err"></small>
+            </div>
+            <div class="form__item">
+              <label for="email">البريد الالكتروني</label>
+              <input type="email" name="email" id="email" />
+              <small class="text-err"></small>
+            </div>
+            <div class="form__item">
+              <label for="phone-number">رقم الهاتف</label>
+              <input type="number" name="phone-number" id="phone-number" />
+              <small class="text-err"></small>
+            </div>
+            <div class="form__item">
+              <label for="whatsapp-number">رقم الواتسب</label>
+              <input
+                type="number"
+                name="whatsapp-number"
+                id="whatsapp-number"
+              />
+              <small class="text-err"></small>
+            </div>
+            <div class="form__item">
+              <label for="password">كلمة المرور</label>
+              <input type="password" name="password" id="password" />
+              <small class="text-err"></small>
+            </div>
+            <div class="form__item">
+              <label for="confirm-password">تأكيد كلمة المرور</label>
+              <input
+                type="password"
+                name="confirm-password"
+                id="confirm-password"
+              />
+              <small class="text-err"></small>
+            </div>
+          </div>
+          <div class="form__bouquet">
+            <div class="form__radio">
+              <input type="radio" name="bouquet" id="bouquet-one" />
+              <label for="bouquet-one"> الباقة الاولى </label>
+            </div>
+
+            <div class="form__radio">
+              <input type="radio" name="bouquet" id="bouquet-two" />
+              <label for="bouquet-two"> الباقة الثانية </label>
+            </div>
+
+            <div class="form__radio">
+              <input type="radio" name="bouquet" id="bouquet-three" />
+              <label for="bouquet-three"> الباقة الثالثة </label>
+            </div>
+          </div>
+          <div class="form__item">
+            <label for="choose">ملاحظات</label>
+            <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+          </div>
+          <div class="operations">
+            <label for="remember-me" class="remember-me">
+              <input type="checkbox" name="remember-me" id="remember-me" />
+              الموافقة على سياسة التسجيل
+            </label>
+          </div>
+
+          <button type="submit" class="register__btn button__main">
+            تسجيل حساب جديد
+          </button>
+
+          <a href="#" class="not__have__account">لديك حساب بالفعل؟</a>
+        </form>
+      </div>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

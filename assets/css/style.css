@@ -1030,3 +1030,191 @@ body {
 }
 
 /* ============ END LOGIN PAGE ============ */
+
+/* ============ START REGISTER PAGE ============ */
+
+.register__page {
+  background: url("../images/login_page_background.jpeg"),
+    linear-gradient(
+        to top right,
+        rgba(255, 255, 255, 0.5) 10%,
+        rgba(3, 34, 80, 0.3) 100%
+      )
+      100%;
+  background-blend-mode: overlay;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+}
+
+.register__page-content {
+  width: 850px;
+  padding: 30px 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.register__page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.register__page-header .change__lang {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register__page-content form {
+  text-align: center;
+}
+
+.register__page-content form .form__items {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.register__page-content form .form__item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.register__page-content form .form__item label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.register__page-content form .form__item input,
+.register__page-content form .form__item select,
+.register__page-content form .form__item textarea {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 5px 15px;
+  height: 50px;
+  border: 1px solid #c3c3c373;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.register__page-content form .form__item textarea {
+  height: initial;
+  margin-bottom: 10px;
+}
+
+.register__page-content form .operations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.register__page-content form .operations .remember-me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9b9b9b;
+}
+
+.register__page-content form .operations .forget-password {
+  text-decoration: none;
+  color: #9b9b9b;
+}
+
+.register__page-content form .register__btn {
+  width: 100%;
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+.register__page-content form .not__have__account {
+  text-decoration: none;
+  color: #9b9b9b;
+  display: block;
+  margin-top: 8px;
+}
+
+.register__page-content form .form__bouquet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.register__page-content form .form__radio {
+  width: calc((100% / 3) - 10px);
+}
+
+.register__page-content form .form__radio label {
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+  display: block;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.register__page-content form .form__radio input {
+  display: none;
+}
+
+.register__page-content form .form__radio input:checked + label {
+  background-color: #032250;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .register__page-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .register__page-content {
+    width: 100%;
+  }
+
+  .register__page-content form .form__items {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .register__page-content form .form__item label,
+  .register__page-content form .form__radio label,
+  .register__page-content form .operations .remember-me,
+  .register__page-content form .operations .forget-password,
+  .register__page-content form .register__btn,
+  .register__page-content form .form__item input,
+  .register__page-content form .form__item textarea,
+  .register__page-content form .not__have__account {
+    font-size: 14px;
+  }
+
+  .register__page-content form .form__item #username,
+  .register__page-content form .form__item #password {
+    height: 35px;
+    margin-top: 6px;
+  }
+
+  .register__page-content form .operations {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .register__page-content form .register__btn {
+    margin-top: 9px;
+  }
+}
+
+/* ============ END REGISTER PAGE ============ */

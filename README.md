@@ -1,3 +1,5 @@
+<h1>Part of the BH dashboard</h1>
+
 <h2>Login Page</h2>
 <img src="./UI/login_page.png" />
 

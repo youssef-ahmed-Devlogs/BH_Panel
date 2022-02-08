@@ -1,4 +1,4 @@
-<h1>Part of the BH dashboard - *It responsive on mobile screen*</h1>
+<h1>Part of the BH dashboard <br /> *It responsive on mobile screen*</h1>
 <h3>Technology used<h3>
 <ul>
   <li>HTML</li>
